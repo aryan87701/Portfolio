@@ -1,0 +1,352 @@
+@import 'tailwindcss';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior:smooth;
+}
+body{
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  overflow-x: hidden;
+  background-color: black;   /* ADD THIS */
+}
+
+.frontcont{
+  display: flex;
+}
+.Front{
+  display: flex;
+}
+.remove{
+  display: none;
+}
+
+.nav{
+  width: 100%;
+  height: 5rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;     /* changed */
+  top: 0;
+  left: 0;
+  z-index: 1000;       /* higher */
+  background: transparent; /* important */
+}
+
+.navul::before{
+    
+    width: 100%;
+    height: 100%;
+}
+.navul{
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 25px;
+  color: rgb(0, 0, 0); 
+  font-size: 1.4rem;   /* desktop size */
+  padding: 4px 12px;
+  animation: fadedown 2s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+/* Tablet */
+@media (max-width: 1024px) {
+  .navul {
+    font-size: 1.2rem;
+    padding: 4px 10px;
+  }
+
+  .navul li a {
+    margin: 8px 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .navul {
+    font-size: 1rem;
+    padding: 3px 8px;
+  }
+
+  .navul li a {
+    margin: 6px 8px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .navul {
+    font-size: 0.9rem;
+  }
+
+  .navul li a {
+    margin: 5px 6px;
+  }
+}
+
+
+.navul li a{
+  margin: 10px 15px ;
+}
+.navul li a:hover{
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out ;
+  /* margin: 10px 15px ; */
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+.navul li a.active{
+  background-color: black;
+  color: white;
+  transition: all 0.2s ease-in-out ;
+  /* margin: 10px 15px ; */
+  padding: 5px 15px;
+  border-radius: 25px;
+}
+
+
+
+.txthome{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 16%;
+    /* height: 225px; */
+    width: 100%;
+    text-align: center;
+    animation: opacity 2s ;
+    transition: all 2s ease-in-out;
+
+}
+.imgdiv{
+  /* width: 100%;
+  display: flex;
+  justify-content: center; */
+  position: relative;
+  top: -50px;
+  width: max-content;
+  left: 50%;
+  transform: translate(-50%);
+}
+.contbody{
+  display: none;
+}
+.nowshow{
+  display:inherit;
+}
+.imgdiv img{
+  position: relative;
+  top: 9em;
+  width: 35rem;
+  animation: fadeup1 2s ease-in-out ;
+  transition: all 2s ease-in-out;
+}
+.leftcont{
+  font-size: 1.2em;
+margin: 0px 30px;
+    bottom: 15em;
+    color: white;
+    position: relative;
+    width: 18%;
+    animation:rtol 2s ease-in-out;
+    transition: all 2s ease-in-out;
+}
+
+.rightcont{
+    margin: 0px 30px;
+    bottom: 15em;
+    color: white;
+    position: relative;
+    width: 18%;
+    float: right;
+    right: 0;
+    animation: rtol 2s ease-in-out;
+      transition: all 2s ease-in-out;
+}
+
+.leftabout{
+  margin: 0px 40px 40px 40px;
+  
+}
+.leftabout p{
+  margin-top: 20px;
+  
+}
+.leftabout h1{
+  background-color: white;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: max-content;
+  
+}
+.skill h1{
+  background-color: white;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: max-content;
+  
+}
+.home{
+  padding-top: 5em;
+}
+@media (max-width: 426px) {
+  .home {
+    padding-top: 0;
+  }
+}
+
+/* .aboutimgdiv img{
+  width: 30rem;
+  position: relative;
+  bottom: 0px;
+  margin: 20px 10px 0px 10px;
+} */
+
+.bgabout{
+  padding: 5em;  
+  background-image: url('../assest/spacebg.jpg');
+   background-size: cover;
+  background-position: center;
+  overflow:visible;
+  position: relative;
+  top:0em;
+}
+.rightabouth1{
+  background-color: white;
+  color: black;
+  padding: 3px 10px;
+  border-radius: 10px;
+  width: max-content;
+ 
+}
+ 
+
+.skill{
+  width: 20rem;
+}
+.skillcont{
+  width: 5em;
+  gap:2rem;
+  display: flex;
+  flex-direction: row;
+
+
+}
+.frontcont{
+  background-color: black;
+}
+.front{
+  animation: fadeup 2s ;
+   transition: all 2s ;
+}
+@keyframes fadeup {
+  0%{
+   opacity: 0%;
+   top: 100px ;
+  }
+  80%{
+    opacity: 100%;
+    top: 0px;
+  }
+  100%{
+    opacity: 0%;
+    top:0px
+  }
+}
+@keyframes fadeup1 {
+  0%{
+   opacity: 0%;
+   top: 100px ;
+  }
+
+  100%{
+    opacity: 100%;
+     top: 0px;
+  }
+}
+@keyframes fadedown {
+  0%{
+   opacity: 0%;
+   margin-top: -20px;
+  }
+
+  100%{
+    opacity: 100%;
+  margin-top: 0px;
+  }
+}
+@keyframes rtol {
+  0%{
+   opacity: 0%;
+   margin: 0px 0px;
+  }
+  100%{
+    opacity: 100%;
+    margin: 0px 30px;
+  }
+}
+@keyframes opacity {
+  0%{
+   opacity: 0%;
+
+  }
+  100%{
+    opacity: 100%;
+
+  }
+}
+
+/* initial hidden state */
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.7s ease-out;
+}
+
+/* when visible */
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* base hidden state */
+
+
+/* ===== FADE UP ===== */
+.fade-up {
+  transform: translateY(40px);
+}
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== SLIDE LEFT ===== */
+.slide-left {
+  transform: translateX(60px);
+}
+.slide-left.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== SCALE ===== */
+.scale {
+  transform: scale(0.8);
+}
+.scale.show {
+  opacity: 1;
+  transform: scale(1);
+}
