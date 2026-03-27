@@ -1,4 +1,3 @@
-import React from 'react';
 import styled from 'styled-components';
 
 import axios from 'axios'
@@ -11,7 +10,7 @@ const handleSubmit = async(e)=>{
     message: e.target.message.value
   };
 
-  axios.post('http://localhost:4000/contact',data)
+  axios.post(`https://portfolio-1jk3.onrender.com/contact`,data)
   .then(()=>{
     alert("Message sent successfully")
     e.target.reset()

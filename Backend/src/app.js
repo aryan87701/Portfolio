@@ -5,7 +5,9 @@ const app = express()
 const connectDB = require('./db/db')
 const cors = require('cors')
 const contactModel = require('./models/contact.model')
-app.use(cors())
+app.use(cors({
+    origin:"https://portfolio-sigma-rouge-95.vercel.app/"
+}))
 app.use(express.json())
 connectDB()
 
